@@ -18,15 +18,17 @@ public class BALST<K extends Comparable<K>, V> implements BALSTADT<K, V> {
 	}
 
 	@Override
-	public K getKeyAtRoot() {
-		// TODO Auto-generated method stub
-		return null;
+	public K getKeyAtRoot() {		
+		return root.getKey();
 	}
 
 	@Override
 	public K getKeyOfLeftChildOf(K key) throws IllegalNullKeyException, KeyNotFoundException {
 		// TODO Auto-generated method stub
-		return null;
+	  if (key == null) {
+	    throw new IllegalNullKeyException();
+	  }
+		return key.getLeftChild().getKey() ;
 	}
 
 	@Override

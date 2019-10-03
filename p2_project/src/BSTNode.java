@@ -40,4 +40,25 @@ class BSTNode<K,V> {
     
     BSTNode(K key, V value) { this(key,value,null,null); }
     
+    public K getKey() {
+      return key;
+    }
+    
+    public V getValue() {
+      return value;
+    }
+    
+    public BSTNode getLeftChild() {
+      return left;
+    }
+    
+    public BSTNode getRightChild() {
+      return right;
+    }
+    
+    public int getHeight(){
+      return height;
+    }
+    
+    
 }
